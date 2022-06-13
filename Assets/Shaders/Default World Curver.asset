@@ -29,5 +29,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 06d25b9901d7d544a841a623e9c11c32, type: 2}
   - {fileID: 2100000, guid: 55e48cc032eb5a644a3ae22c6e5bea11, type: 2}
   - {fileID: 2100000, guid: 223ed2e3d5ade234fa203026f79a26bb, type: 2}
-  magnitude: 0.01
+  magnitude: 0.003
   peekDistance: 0

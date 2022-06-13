@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1578159-481a-499b-86bb-606a12b7df58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Curved Atlas.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Curved Atlas.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/Win3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/Win3.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/ayakkabı.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/ayakkabı.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/hair.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/hair.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/pantolon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/ayakta/pantolon.mat" afterDir="false" />
@@ -22,6 +25,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/sit_pose/skin.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/sit_pose/skin.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/sit_pose/tshirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Models/Characters/seyirci/materials/sit_pose/tshirt.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Default World Curver.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Default World Curver.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +88,7 @@
       <updated>1655123799904</updated>
       <workItem from="1655123810378" duration="635000" />
       <workItem from="1655138265775" duration="2040000" />
-      <workItem from="1655142489875" duration="1469000" />
+      <workItem from="1655142489875" duration="3587000" />
     </task>
     <servers />
   </component>
