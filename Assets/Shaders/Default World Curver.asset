@@ -36,4 +36,4 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0cddbaf468b974e43b5f3ca8744e1bf4, type: 2}
   - {fileID: 2100000, guid: 50b3a424b27a3423d8eec4fc2d39abb0, type: 2}
   magnitude: 0.003
-  peekDistance: 0
+  peekDistance: 20

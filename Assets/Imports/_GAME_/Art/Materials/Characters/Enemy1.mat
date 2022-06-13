@@ -105,7 +105,7 @@ Material:
     - _Offset2: 0
     - _Outline: 0.01
     - _Parallax: 0.02
-    - _Peek_Distance: 0
+    - _Peek_Distance: 20
     - _QueueOffset: 0
     - _RampSmooth: 1
     - _RampSmoothAdd: 1
