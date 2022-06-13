@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901688d0f1ab049099e2e0a7b869d8bd, type: 3}
+  m_Name: Default World Curver
+  m_EditorClassIdentifier: 
+  materialsToCurve:
+  - {fileID: 2100000, guid: 9088786a231424d1e89bfe1b3e26a1e0, type: 2}
+  - {fileID: 2100000, guid: a736d6900cd43b749b7b404a4c55bb20, type: 2}
+  - {fileID: 2100000, guid: 73507057bac767049ad6f828a531852d, type: 2}
+  - {fileID: 2100000, guid: 746602cb8287ced4982a6fdde3f12439, type: 2}
+  - {fileID: 2100000, guid: 27250486c6c674847a7b1cfade74d2a9, type: 2}
+  - {fileID: 2100000, guid: 1a0b7afd16e4b104399a372f4c4c24e2, type: 2}
+  - {fileID: 2100000, guid: f1b1a224da6ba384fbeb0ea5d1cfccd9, type: 2}
+  - {fileID: 2100000, guid: dbfe5b1d1473a6d46bf0701230d38f7e, type: 2}
+  - {fileID: 2100000, guid: f6895c001a3ba4946b534ecde83235e0, type: 2}
+  - {fileID: 2100000, guid: ab1cec006b60dac4589f95ffdb96758c, type: 2}
+  - {fileID: 2100000, guid: f27697640501e654894924770c356cb8, type: 2}
+  - {fileID: 2100000, guid: 35a2e943891aa3348ba283aed8c1c1ec, type: 2}
+  - {fileID: 2100000, guid: f7566d160fa45054a92f56d17d388270, type: 2}
+  - {fileID: 2100000, guid: 06d25b9901d7d544a841a623e9c11c32, type: 2}
+  - {fileID: 2100000, guid: 55e48cc032eb5a644a3ae22c6e5bea11, type: 2}
+  - {fileID: 2100000, guid: 223ed2e3d5ade234fa203026f79a26bb, type: 2}
+  magnitude: 0.01
+  peekDistance: 0
