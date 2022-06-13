@@ -21,7 +21,7 @@ namespace Player
         public void OnPlayerTurnedLeft()
         {
             animator.SetBool(isRight, false);
-            animator.SetBool(isLeft, transform);
+            animator.SetBool(isLeft, true);
         }
         
         public void OnPlayerTurnedStraight()
