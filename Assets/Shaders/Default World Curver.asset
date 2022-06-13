@@ -29,5 +29,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 06d25b9901d7d544a841a623e9c11c32, type: 2}
   - {fileID: 2100000, guid: 55e48cc032eb5a644a3ae22c6e5bea11, type: 2}
   - {fileID: 2100000, guid: 223ed2e3d5ade234fa203026f79a26bb, type: 2}
+  - {fileID: 2100000, guid: 15cb0ab3f26e647bfa2b49f4b2f26274, type: 2}
+  - {fileID: 2100000, guid: 60d479c137a2047ac98fedd9cca0328e, type: 2}
+  - {fileID: 2100000, guid: 17b1b23d7df164bb99349f663cf5cb5b, type: 2}
+  - {fileID: 2100000, guid: ca5f4fb01821941ae8d2cb49c9eb6476, type: 2}
+  - {fileID: 2100000, guid: 0cddbaf468b974e43b5f3ca8744e1bf4, type: 2}
+  - {fileID: 2100000, guid: 50b3a424b27a3423d8eec4fc2d39abb0, type: 2}
   magnitude: 0.003
   peekDistance: 0
