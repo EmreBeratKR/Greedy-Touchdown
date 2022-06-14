@@ -17,6 +17,7 @@ namespace Player
         [SerializeField, Min(0f)] private float borderX;
 
         private Rigidbody body;
+        private RunSpeedMode runSpeedMode;
         private RunMode runMode;
         private State state;
 
@@ -30,6 +31,7 @@ namespace Player
 
         private void Update()
         {
+            UpdateRunSpeedMode();
             SetForwardSpeed();
             CheckBorder();
             MoveVertical();
@@ -68,6 +70,12 @@ namespace Player
         private void StopRunning()
         {
             state = State.Idle;
+        }
+
+        private void UpdateRunSpeedMode()
+        {
+            var positionX = body.position.x;
+            runSpeedMode = positionX < 0f ? RunSpeedMode.Fast : RunSpeedMode.Normal;
         }
 
         private void CheckBorder()
@@ -112,6 +120,7 @@ namespace Player
         private void SetForwardSpeed()
         {
             var speed = state == State.Run ? runSpeed : 0f;
+            speed *= runSpeedMode == RunSpeedMode.Fast ? 2f : 1f;
             var oldVelocity = body.velocity;
             oldVelocity.z = speed;
             body.velocity = oldVelocity;
@@ -123,6 +132,12 @@ namespace Player
             Right = 1,
             Left = -1,
             Straight = 0
+        }
+        
+        private enum RunSpeedMode
+        {
+            Normal,
+            Fast
         }
         
         private enum State
