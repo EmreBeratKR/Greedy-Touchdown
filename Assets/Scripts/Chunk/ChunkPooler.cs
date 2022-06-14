@@ -20,7 +20,7 @@ namespace Chunk
         [SerializeField, Min(0)] private int chunkCycleCount;
 
 
-        private static readonly Queue<Chunk> Chunks = new Queue<Chunk>();
+        private readonly Queue<Chunk> chunks = new Queue<Chunk>();
         private float poolLenght;
         private int pooledChunkCount;
         private State state;
@@ -36,11 +36,11 @@ namespace Chunk
         
             if (pooledChunkCount < chunkCycleCount)
             {
-                var firstChunk = Chunks.Dequeue();
+                var firstChunk = chunks.Dequeue();
                 var oldPosition = firstChunk.Position;
                 oldPosition.z += poolLenght;
                 firstChunk.Position = oldPosition;
-                Chunks.Enqueue(firstChunk);
+                chunks.Enqueue(firstChunk);
 
                 pooledChunkCount++;
                 return;
@@ -58,7 +58,7 @@ namespace Chunk
                 var newChunk = Instantiate(groundChunkPrefab, chunkParent);
                 var position = Vector3.forward * ((i - behindChunkCount) * chunkSize);
                 newChunk.Position = position;
-                Chunks.Enqueue(newChunk);
+                chunks.Enqueue(newChunk);
             }
 
             pooledChunkCount += poolSize - behindChunkCount;
@@ -67,7 +67,7 @@ namespace Chunk
         private void GenerateEndChunk()
         {
             var endChunk = Instantiate(endChunkPrefab, chunkParent);
-            var lastChunk = Chunks.Last();
+            var lastChunk = chunks.Last();
             var endPosition = lastChunk.Position + Vector3.forward * chunkSize;
             endChunk.Position = endPosition;
 
