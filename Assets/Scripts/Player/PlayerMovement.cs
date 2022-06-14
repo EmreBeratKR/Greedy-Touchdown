@@ -17,7 +17,7 @@ namespace Player
         [SerializeField, Min(0f)] private float borderX;
 
         private Rigidbody body;
-        private MotionMode motionMode;
+        private RunMode runMode;
         private State state;
 
 
@@ -37,52 +37,29 @@ namespace Player
 
         public void OnPointerDown()
         {
-            if (motionMode == MotionMode.Left) return;
+            if (state != State.Run) return;
             
-            motionMode = MotionMode.Left;
+            if (runMode == RunMode.Left) return;
+            
+            runMode = RunMode.Left;
             playerTurnLeft.RaiseEvent();
         }
 
         public void OnPointerUp()
         {
-            if (motionMode == MotionMode.Right) return;
+            if (state != State.Run) return;
             
-            motionMode = MotionMode.Right;
+            if (runMode == RunMode.Right) return;
+            
+            runMode = RunMode.Right;
             playerTurnRight.RaiseEvent();
         }
 
-        private void CheckBorder()
+        public void OnLevelEnd()
         {
-            if (motionMode == MotionMode.Straight) return;
-            
-            var positionX = body.position.x;
-            
-            if (motionMode == MotionMode.Right)
-            {
-                if (positionX < borderX) return;
-
-                motionMode = MotionMode.Straight;
-                playerTurnStraight.RaiseEvent();
-            }
-            
-            else if (motionMode == MotionMode.Left)
-            {
-                if (positionX > -borderX) return;
-
-                motionMode = MotionMode.Straight;
-                playerTurnStraight.RaiseEvent();
-            }
+            StopRunning();
         }
-
-        private void MoveVertical()
-        {
-            var speedX = verticalSpeed * (float) motionMode;
-
-            var oldVelocity = body.velocity;
-            oldVelocity.x = speedX;
-            body.velocity = oldVelocity;
-        }
-
+        
         private void StartRunning()
         {
             state = State.Run;
@@ -91,6 +68,45 @@ namespace Player
         private void StopRunning()
         {
             state = State.Idle;
+        }
+
+        private void CheckBorder()
+        {
+            if (state != State.Run) return;
+            
+            if (runMode == RunMode.Straight) return;
+            
+            var positionX = body.position.x;
+            
+            if (runMode == RunMode.Right)
+            {
+                if (positionX < borderX) return;
+
+                runMode = RunMode.Straight;
+                playerTurnStraight.RaiseEvent();
+            }
+            
+            else if (runMode == RunMode.Left)
+            {
+                if (positionX > -borderX) return;
+
+                runMode = RunMode.Straight;
+                playerTurnStraight.RaiseEvent();
+            }
+        }
+
+        private void MoveVertical()
+        {
+            var speedX = verticalSpeed * (float) runMode;
+
+            if (state != State.Run)
+            {
+                speedX = 0f;
+            }
+
+            var oldVelocity = body.velocity;
+            oldVelocity.x = speedX;
+            body.velocity = oldVelocity;
         }
 
         private void SetForwardSpeed()
@@ -102,7 +118,7 @@ namespace Player
         }
         
         
-        private enum MotionMode
+        private enum RunMode
         {
             Right = 1,
             Left = -1,

@@ -8,7 +8,7 @@ namespace Player
     {
         [Header("Event Channels")]
         [SerializeField] private VoidEventChannel playerEnteredNextChunk;
-        [SerializeField] private VoidEventChannel playerEnteredEndChunk;
+        [SerializeField] private VoidEventChannel levelEnd;
         
         [Header("Tags")]
         [SerializeField, Tag] private string groundChunk;
@@ -25,7 +25,7 @@ namespace Player
             
             if (other.CompareTag(endChunk))
             {
-                playerEnteredEndChunk.RaiseEvent();
+                levelEnd.RaiseEvent();
             }
         }
     }

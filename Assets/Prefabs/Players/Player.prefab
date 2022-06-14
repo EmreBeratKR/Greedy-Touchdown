@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1573785407195605031}
   - component: {fileID: 7771836596901411876}
   - component: {fileID: 1648558063152553849}
+  - component: {fileID: 734180586690312664}
   m_Layer: 0
   m_Name: Event Listener
   m_TagString: Untagged
@@ -161,6 +162,33 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9005274949848375928}
         m_MethodName: OnPlayerTurnedStraight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &734180586690312664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612744053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad30ffef2d4943cdb824bf5f20bf2721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 9e2ad4c2bd1264af9a992a7f7bf51196, type: 2}
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 840792078}
+        m_MethodName: OnLevelEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1894,8 +1922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEnteredNextChunk: {fileID: 11400000, guid: a80168044915c4016bb6313044299d85,
     type: 2}
-  playerEnteredEndChunk: {fileID: 11400000, guid: 9e2ad4c2bd1264af9a992a7f7bf51196,
-    type: 2}
+  levelEnd: {fileID: 11400000, guid: 9e2ad4c2bd1264af9a992a7f7bf51196, type: 2}
   groundChunk: Chunk Enter
   endChunk: End Chunk Enter
 --- !u!114 &3465014388948681820
