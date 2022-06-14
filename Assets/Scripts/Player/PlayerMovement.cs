@@ -82,9 +82,9 @@ namespace Player
         
         private enum MotionMode
         {
-            Straight = 0,
             Right = 1,
-            Left = -1
+            Left = -1,
+            Straight = 0
         }
     }
 }
