@@ -6,7 +6,8 @@ public class CameraController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera
         playerNearFollow,
         playerFarFollow,
-        playerLevelEndFollow;
+        playerLevelEndFollow,
+        gameOver;
 
     
     private CinemachineVirtualCamera[] virtualCameras;
@@ -20,7 +21,8 @@ public class CameraController : MonoBehaviour
                 {
                     playerNearFollow,
                     playerFarFollow,
-                    playerLevelEndFollow
+                    playerLevelEndFollow,
+                    gameOver
                 };
             }
 
@@ -42,6 +44,11 @@ public class CameraController : MonoBehaviour
     public void OnLevelEnd()
     {
         ChangeVirtualCamera(playerLevelEndFollow);
+    }
+
+    public void OnGameOver()
+    {
+        ChangeVirtualCamera(gameOver);
     }
     
     private void ChangeVirtualCamera(CinemachineVirtualCamera virtualCameraToActivate)

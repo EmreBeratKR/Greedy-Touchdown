@@ -6,9 +6,10 @@ namespace Player
 {
     public class PlayerCollision : MonoBehaviour
     {
-        [Header("Event Channels")]
+        [Header("Event Channels")] 
         [SerializeField] private VoidEventChannel playerEnteredNextChunk;
         [SerializeField] private VoidEventChannel levelEnd;
+        [SerializeField] private VoidEventChannel gameOver;
 
         [Header("References")]
         [SerializeField] private CapsuleCollider mainCollider;
@@ -17,6 +18,7 @@ namespace Player
         [SerializeField, Tag] private string groundChunk;
         [SerializeField, Tag] private string endChunk;
         [SerializeField, Tag] private string fellow;
+        [SerializeField, Tag] private string enemy;
 
         [Header("Values")]
         [SerializeField] private LayerMask dummies;
@@ -55,10 +57,12 @@ namespace Player
             }
         }
 
-        private void OnDrawGizmos()
+        private void OnCollisionEnter(Collision collision)
         {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(mainCollider.transform.position + mainCollider.center, mainCollider.radius);
+            if (collision.collider.CompareTag(enemy))
+            {
+                gameOver.RaiseEvent();
+            }
         }
     }
 }

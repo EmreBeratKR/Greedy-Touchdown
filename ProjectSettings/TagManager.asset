@@ -8,6 +8,7 @@ TagManager:
   - End Chunk Enter
   - Fellow
   - Enemy
+  - Rugby Ball
   layers:
   - Default
   - TransparentFX

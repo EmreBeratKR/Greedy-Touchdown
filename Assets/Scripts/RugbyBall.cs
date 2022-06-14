@@ -17,6 +17,13 @@ public class RugbyBall : MonoBehaviour
         Throw();
     }
 
+    public void OnPlayerRagdollActivated()
+    {
+        transform.parent = null;
+        body.isKinematic = false;
+        body.useGravity = true;
+    }
+
     private void Throw()
     {
         transform.parent = null;
