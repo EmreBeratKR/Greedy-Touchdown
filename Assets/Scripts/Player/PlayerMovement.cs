@@ -12,12 +12,13 @@ namespace Player
         [SerializeField] private VoidEventChannel playerTurnStraight;
 
         [Header("Values")]
-        [SerializeField] private float verticalSpeed;
-        [SerializeField] private float runSpeed;
-        [SerializeField] private float borderX;
+        [SerializeField, Min(0f)] private float verticalSpeed;
+        [SerializeField, Min(0f)] private float runSpeed;
+        [SerializeField, Min(0f)] private float borderX;
 
         private Rigidbody body;
         private MotionMode motionMode;
+        private State state;
 
 
         private void Start()
@@ -29,8 +30,8 @@ namespace Player
 
         private void Update()
         {
+            SetForwardSpeed();
             CheckBorder();
-            
             MoveVertical();
         }
 
@@ -84,15 +85,19 @@ namespace Player
 
         private void StartRunning()
         {
-            var oldVelocity = body.velocity;
-            oldVelocity.z = runSpeed;
-            body.velocity = oldVelocity;
+            state = State.Run;
         }
         
         private void StopRunning()
         {
+            state = State.Idle;
+        }
+
+        private void SetForwardSpeed()
+        {
+            var speed = state == State.Run ? runSpeed : 0f;
             var oldVelocity = body.velocity;
-            oldVelocity.z = 0f;
+            oldVelocity.z = speed;
             body.velocity = oldVelocity;
         }
         
@@ -102,6 +107,13 @@ namespace Player
             Right = 1,
             Left = -1,
             Straight = 0
+        }
+        
+        private enum State
+        {
+            Idle,
+            Run,
+            Dance
         }
     }
 }

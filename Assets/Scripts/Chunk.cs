@@ -2,8 +2,9 @@
 
 public class Chunk : MonoBehaviour
 {
-    public void SetPosition(Vector3 position)
+    public Vector3 Position
     {
-        transform.position = position;
+        get => transform.position;
+        set => transform.position = value;
     }
 }

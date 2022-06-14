@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1578159-481a-499b-86bb-606a12b7df58" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollision.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollision.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - Base.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - Base.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - End.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - End.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - Inside.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports/_GAME_/Art/Materials/Environment/Tunnel - Inside.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunk.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunk.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/Chunk - Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/Chunk - Ground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/Chunk - LevelEnd.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/Chunk - LevelEnd.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChunkPooler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChunkPooler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Default World Curver.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Default World Curver.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <workItem from="1655138265775" duration="2040000" />
       <workItem from="1655142489875" duration="8989000" />
       <workItem from="1655162387653" duration="204000" />
-      <workItem from="1655194867354" duration="1888000" />
+      <workItem from="1655194867354" duration="5603000" />
     </task>
     <servers />
   </component>
