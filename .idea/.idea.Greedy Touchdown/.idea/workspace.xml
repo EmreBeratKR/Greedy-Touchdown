@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c1578159-481a-499b-86bb-606a12b7df58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Fellow Animator.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Fellow Animator.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Run.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Run.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Dude Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Dude Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Dude Fellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Dude Fellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Fellow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Fellow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance3.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ModelRandomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ModelRandomizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rugby Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rugby Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <workItem from="1655138265775" duration="2040000" />
       <workItem from="1655142489875" duration="8989000" />
       <workItem from="1655162387653" duration="204000" />
-      <workItem from="1655194867354" duration="11114000" />
+      <workItem from="1655194867354" duration="12818000" />
     </task>
     <servers />
   </component>

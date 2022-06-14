@@ -1,4 +1,5 @@
 ﻿using NaughtyAttributes;
+using ScriptableEvents.Core.Channels;
 using UnityEngine;
 
 namespace Player
@@ -6,7 +7,11 @@ namespace Player
     public class PlayerAnimator : MonoBehaviour
     {
         private const string DancePrefix = "dance";
+
+        [Header("Event Channels")]
+        [SerializeField] private VoidEventChannel playerThrowBall;
         
+        [Header("References")]
         [SerializeField] private Animator animator;
 
         [SerializeField, AnimatorParam(nameof(animator))]
@@ -37,6 +42,11 @@ namespace Player
             var danceType = Random.Range(1, 4);
             var danceTypeKey = DancePrefix + danceType;
             animator.SetTrigger(danceTypeKey);
+        }
+
+        public void RaisePlayerThrowBall()
+        {
+            playerThrowBall.RaiseEvent();
         }
     }
 }
