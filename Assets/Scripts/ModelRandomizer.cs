@@ -8,8 +8,14 @@ public class ModelRandomizer : MonoBehaviour
     [SerializeField] private Material[] bodyMaterials;
     [SerializeField] private bool randomizeBodyMaterial;
 
+    [Header("Random Number by GameObject")]
     [SerializeField] private GameObject[] numbers;
     [SerializeField] private bool randomizeNumber;
+
+    [Header("Random Number by Mesh")]
+    [SerializeField] private MeshFilter numberMeshFilter;
+    [SerializeField] private Mesh[] numberMeshes;
+    [SerializeField] private bool randomizeNumberMesh;
 
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
@@ -17,6 +23,7 @@ public class ModelRandomizer : MonoBehaviour
     {
         RandomizeBodyMaterial();
         RandomizeNumber();
+        RandomizeNumberMesh();
     }
 
     private void RandomizeBodyMaterial()
@@ -37,5 +44,13 @@ public class ModelRandomizer : MonoBehaviour
         {
             numbers[i].SetActive(i == randomNumber);
         }
+    }
+
+    private void RandomizeNumberMesh()
+    {
+        if (!randomizeNumberMesh) return;
+
+        var randomMesh = numberMeshes[Random.Range(0, numberMeshes.Length)];
+        numberMeshFilter.mesh = randomMesh;
     }
 }
