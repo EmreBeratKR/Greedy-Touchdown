@@ -8,11 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance1.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player/Dance3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rugby Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rugby Ball.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1655138265775" duration="2040000" />
       <workItem from="1655142489875" duration="8989000" />
       <workItem from="1655162387653" duration="204000" />
-      <workItem from="1655194867354" duration="12818000" />
+      <workItem from="1655194867354" duration="14862000" />
     </task>
     <servers />
   </component>

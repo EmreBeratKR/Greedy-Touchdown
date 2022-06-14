@@ -10,6 +10,8 @@ namespace Player
         [SerializeField] private VoidEventChannel playerTurnRight;
         [SerializeField] private VoidEventChannel playerTurnLeft;
         [SerializeField] private VoidEventChannel playerTurnStraight;
+        [SerializeField] private VoidEventChannel playerNormalRun;
+        [SerializeField] private VoidEventChannel playerFastRun;
 
         [Header("Values")]
         [SerializeField, Min(0f)] private float verticalSpeed;
@@ -75,7 +77,19 @@ namespace Player
         private void UpdateRunSpeedMode()
         {
             var positionX = body.position.x;
-            runSpeedMode = positionX < 0f ? RunSpeedMode.Fast : RunSpeedMode.Normal;
+            var newRunSpeedMode = positionX < 0f ? RunSpeedMode.Fast : RunSpeedMode.Normal;
+            
+            if (newRunSpeedMode == runSpeedMode) return;
+
+            runSpeedMode = newRunSpeedMode;
+
+            if (newRunSpeedMode == RunSpeedMode.Normal)
+            {
+                playerNormalRun.RaiseEvent();
+                return;
+            }
+            
+            playerFastRun.RaiseEvent();
         }
 
         private void CheckBorder()
