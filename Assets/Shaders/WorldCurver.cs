@@ -8,6 +8,7 @@ namespace Shaders
         [SerializeField] private Material[] materialsToCurve;
         [SerializeField, Range(-0.01f, 0.01f)] private float magnitude;
         [SerializeField] private float peekDistance;
+        [SerializeField] private bool active;
         
         
         private static readonly int MagnitudeID = Shader.PropertyToID("_Magnitude");
@@ -16,10 +17,13 @@ namespace Shaders
 
         private void OnValidate()
         {
+            var magnitudeValue = active ? magnitude : 0f;
+            var peekDistanceValue = active ? peekDistance : 0f;
+            
             foreach (var material in materialsToCurve)
             {
-                material.SetFloat(MagnitudeID, magnitude);
-                material.SetFloat(PeekDistanceID, peekDistance);
+                material.SetFloat(MagnitudeID, magnitudeValue);
+                material.SetFloat(PeekDistanceID, peekDistanceValue);
             }
         }
     }
