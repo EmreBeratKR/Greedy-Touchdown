@@ -5,12 +5,14 @@ namespace Player
 {
     public class PlayerAnimator : MonoBehaviour
     {
-        [SerializeField] private Animator animator;
+        private const string DancePrefix = "dance";
         
+        [SerializeField] private Animator animator;
+
         [SerializeField, AnimatorParam(nameof(animator))]
         private int isRight, isLeft;
-        
-        
+
+
 
         public void OnPlayerTurnedRight()
         {
@@ -28,6 +30,13 @@ namespace Player
         {
             animator.SetBool(isRight, false);
             animator.SetBool(isLeft, false);
+        }
+
+        public void OnLevelEnd()
+        {
+            var danceType = Random.Range(1, 4);
+            var danceTypeKey = DancePrefix + danceType;
+            animator.SetTrigger(danceTypeKey);
         }
     }
 }

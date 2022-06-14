@@ -128,8 +128,7 @@ namespace Player
         private enum State
         {
             Idle,
-            Run,
-            Dance
+            Run
         }
     }
 }

@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c1578159-481a-499b-86bb-606a12b7df58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Greedy Touchdown/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/Player/PlayerEnteredEndChunk.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Events/Player/PlayerEnteredEndChunk.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Player Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Player Animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Win3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +77,7 @@
       <workItem from="1655138265775" duration="2040000" />
       <workItem from="1655142489875" duration="8989000" />
       <workItem from="1655162387653" duration="204000" />
-      <workItem from="1655194867354" duration="6847000" />
+      <workItem from="1655194867354" duration="7792000" />
     </task>
     <servers />
   </component>
