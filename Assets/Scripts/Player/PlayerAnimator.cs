@@ -1,6 +1,7 @@
 ﻿using NaughtyAttributes;
 using ScriptableEvents.Core.Channels;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Player
 {
@@ -10,14 +11,14 @@ namespace Player
 
         [Header("Event Channels")]
         [SerializeField] private VoidEventChannel playerThrowBall;
-        
-        [Header("References")]
+
+        [Header("References")] 
+        [SerializeField] private LevelData levelData;
         [SerializeField] private Animator animator;
 
         [SerializeField, AnimatorParam(nameof(animator))]
-        private int isRight, isLeft;
-
-
+        private int isRight, isLeft, speed;
+        
 
         public void OnPlayerTurnedRight()
         {
@@ -35,6 +36,16 @@ namespace Player
         {
             animator.SetBool(isRight, false);
             animator.SetBool(isLeft, false);
+        }
+
+        public void OnPlayerNormalRun()
+        {
+            animator.SetFloat(speed, 1f);
+        }
+        
+        public void OnPlayerFastRun()
+        {
+            animator.SetFloat(speed, levelData.FastRunAnimatorMultiplier);
         }
 
         public void OnLevelEnd()

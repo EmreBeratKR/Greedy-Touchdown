@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1648558063152553849}
   - component: {fileID: 734180586690312664}
   - component: {fileID: 6860137966919818703}
+  - component: {fileID: 745212114479126807}
+  - component: {fileID: 2206899253058158871}
   m_Layer: 0
   m_Name: Event Listener
   m_TagString: Untagged
@@ -228,6 +230,60 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2581203507219131810}
         m_MethodName: OnPlayerThrowBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &745212114479126807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612744053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad30ffef2d4943cdb824bf5f20bf2721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 054f8038578584c8b977d464d7084955, type: 2}
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9005274949848375928}
+        m_MethodName: OnPlayerNormalRun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2206899253058158871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612744053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad30ffef2d4943cdb824bf5f20bf2721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 74cca358e121e474d9501292bac4fb9f, type: 2}
+  onEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9005274949848375928}
+        m_MethodName: OnPlayerFastRun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1947,9 +2003,10 @@ MonoBehaviour:
   playerTurnStraight: {fileID: 11400000, guid: f5cfad1932caf4cdcb552c73039bfff3, type: 2}
   playerNormalRun: {fileID: 11400000, guid: 054f8038578584c8b977d464d7084955, type: 2}
   playerFastRun: {fileID: 11400000, guid: 74cca358e121e474d9501292bac4fb9f, type: 2}
+  playerCollision: {fileID: 608655896}
+  levelData: {fileID: 11400000, guid: 6ef53585c221c4773a26cee130803087, type: 2}
   verticalSpeed: 5
   runSpeed: 5
-  borderX: 1.4
 --- !u!114 &608655896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1965,8 +2022,14 @@ MonoBehaviour:
   playerEnteredNextChunk: {fileID: 11400000, guid: a80168044915c4016bb6313044299d85,
     type: 2}
   levelEnd: {fileID: 11400000, guid: 9e2ad4c2bd1264af9a992a7f7bf51196, type: 2}
+  mainCollider: {fileID: 7522329900942791073}
   groundChunk: Chunk Enter
   endChunk: End Chunk Enter
+  fellow: Fellow
+  dummies:
+    serializedVersion: 2
+    m_Bits: 1024
+  minDistanceWithFellow: 1
 --- !u!114 &3465014388948681820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3704,6 +3767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a108b0b2376430fb121e6a9272cdda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fellowCollected: {fileID: 11400000, guid: 0aa16b023b3654abb9270c0b07e1df50, type: 2}
+  enemyCollected: {fileID: 11400000, guid: 08a0cdfb063844a7d8fc3522fbacc90e, type: 2}
   fellow: Fellow
   enemy: Enemy
 --- !u!1 &5624696845452246531
@@ -3970,9 +4035,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerThrowBall: {fileID: 11400000, guid: 15dae5ffac69c4db3b7ddc75e961c7c9, type: 2}
+  levelData: {fileID: 11400000, guid: 6ef53585c221c4773a26cee130803087, type: 2}
   animator: {fileID: 6034225046078006252}
   isRight: -1109588950
   isLeft: -614796700
+  speed: -823668238
 --- !u!1 &6149662202474634443
 GameObject:
   m_ObjectHideFlags: 0

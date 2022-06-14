@@ -13,20 +13,25 @@ namespace Player
         [SerializeField] private VoidEventChannel playerNormalRun;
         [SerializeField] private VoidEventChannel playerFastRun;
 
+        [Header("References")]
+        [SerializeField] private PlayerCollision playerCollision;
+        [SerializeField] private LevelData levelData;
+        
         [Header("Values")]
         [SerializeField, Min(0f)] private float verticalSpeed;
         [SerializeField, Min(0f)] private float runSpeed;
-        [SerializeField, Min(0f)] private float borderX;
 
         private Rigidbody body;
         private RunSpeedMode runSpeedMode;
         private RunMode runMode;
         private State state;
+        
 
 
         private void Start()
         {
             body = GetComponent<Rigidbody>();
+            body.position = Vector3.right * levelData.BorderX;
             
             StartRunning();
         }
@@ -102,7 +107,7 @@ namespace Player
             
             if (runMode == RunMode.Right)
             {
-                if (positionX < borderX) return;
+                if (positionX < levelData.BorderX) return;
 
                 runMode = RunMode.Straight;
                 playerTurnStraight.RaiseEvent();
@@ -110,7 +115,7 @@ namespace Player
             
             else if (runMode == RunMode.Left)
             {
-                if (positionX > -borderX) return;
+                if (positionX > -levelData.BorderX) return;
 
                 runMode = RunMode.Straight;
                 playerTurnStraight.RaiseEvent();
@@ -134,7 +139,13 @@ namespace Player
         private void SetForwardSpeed()
         {
             var speed = state == State.Run ? runSpeed : 0f;
-            speed *= runSpeedMode == RunSpeedMode.Fast ? 2f : 1f;
+            speed *= runSpeedMode == RunSpeedMode.Fast ? levelData.FastRunMultiplier : 1f;
+
+            if (playerCollision.IsBlockedByFellow)
+            {
+                speed = Mathf.Clamp(speed, 0f, levelData.DummySpeed);
+            }
+            
             var oldVelocity = body.velocity;
             oldVelocity.z = speed;
             body.velocity = oldVelocity;
