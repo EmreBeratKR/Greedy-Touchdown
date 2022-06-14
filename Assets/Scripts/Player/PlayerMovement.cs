@@ -10,9 +10,10 @@ namespace Player
         [SerializeField] private VoidEventChannel playerTurnRight;
         [SerializeField] private VoidEventChannel playerTurnLeft;
         [SerializeField] private VoidEventChannel playerTurnStraight;
-        
+
         [Header("Values")]
         [SerializeField] private float verticalSpeed;
+        [SerializeField] private float runSpeed;
         [SerializeField] private float borderX;
 
         private Rigidbody body;
@@ -22,6 +23,8 @@ namespace Player
         private void Start()
         {
             body = GetComponent<Rigidbody>();
+            
+            StartRunning();
         }
 
         private void Update()
@@ -76,6 +79,20 @@ namespace Player
 
             var oldVelocity = body.velocity;
             oldVelocity.x = speedX;
+            body.velocity = oldVelocity;
+        }
+
+        private void StartRunning()
+        {
+            var oldVelocity = body.velocity;
+            oldVelocity.z = runSpeed;
+            body.velocity = oldVelocity;
+        }
+        
+        private void StopRunning()
+        {
+            var oldVelocity = body.velocity;
+            oldVelocity.z = 0f;
             body.velocity = oldVelocity;
         }
         

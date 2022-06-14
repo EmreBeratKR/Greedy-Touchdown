@@ -1877,6 +1877,7 @@ MonoBehaviour:
   playerTurnLeft: {fileID: 11400000, guid: 6d28a5cd75950412088fc8f5fd72ec21, type: 2}
   playerTurnStraight: {fileID: 11400000, guid: f5cfad1932caf4cdcb552c73039bfff3, type: 2}
   verticalSpeed: 5
+  runSpeed: 5
   borderX: 1.4
 --- !u!114 &3465014388948681820
 MonoBehaviour:
