@@ -41,6 +41,7 @@ namespace Dummy
             var oldLocalPosition = firstDummy.LocalPosition;
             oldLocalPosition.z = lastDummy.LocalPosition.z + RandomDistance;
             firstDummy.LocalPosition = oldLocalPosition;
+            firstDummy.RandomizeModel();
             dummies.Enqueue(firstDummy);
         }
 
