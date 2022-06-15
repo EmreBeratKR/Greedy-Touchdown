@@ -30,6 +30,11 @@ namespace Chunk
             GenerateChunks();
         }
 
+        public void OnGameStarted()
+        {
+            state = State.Active;
+        }
+
         public void OnPlayerEnteredNextChunk()
         {
             if (state == State.Deactive) return;
@@ -42,7 +47,10 @@ namespace Chunk
                 firstChunk.Position = oldPosition;
                 chunks.Enqueue(firstChunk);
 
-                pooledChunkCount++;
+                if (state != State.Infinite)
+                {
+                    pooledChunkCount++;
+                }
                 return;
             }
         
@@ -77,6 +85,7 @@ namespace Chunk
     
         private enum State
         {
+            Infinite,
             Active,
             Deactive
         }
