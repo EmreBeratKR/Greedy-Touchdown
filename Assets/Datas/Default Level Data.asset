@@ -16,5 +16,5 @@ MonoBehaviour:
   chunkLength: 10.1873
   fastRunMultiplier: 2
   fastRunAnimatorMultiplier: 1.5
-  borderX: 1
+  borderX: 0.9
   dummySpeed: 3
