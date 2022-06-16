@@ -1,3 +1,4 @@
+using ChunkSystem;
 using NaughtyAttributes;
 using ScriptableEvents.Core.Channels;
 using UnityEngine;
@@ -25,6 +26,8 @@ namespace Player
         [SerializeField] private float minDistanceWithFellow;
 
 
+        public Chunk CurrentChunk { get; private set; }
+        
 
         public bool IsBlockedByFellow
         {
@@ -49,11 +52,13 @@ namespace Player
             if (other.CompareTag(groundChunk))
             {
                 playerEnteredNextChunk.RaiseEvent();
+                CurrentChunk = other.GetComponentInParent<Chunk>();
             }
             
             else if (other.CompareTag(endChunk))
             {
                 levelEnd.RaiseEvent();
+                CurrentChunk = other.GetComponentInParent<Chunk>();
             }
         }
 

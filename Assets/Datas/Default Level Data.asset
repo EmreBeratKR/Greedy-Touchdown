@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a069d7f22f0e4bea863296e24466692, type: 3}
   m_Name: Default Level Data
   m_EditorClassIdentifier: 
+  levelChunkCount: 20
+  chunkLength: 10.1873
   fastRunMultiplier: 2
   fastRunAnimatorMultiplier: 1.5
   borderX: 1

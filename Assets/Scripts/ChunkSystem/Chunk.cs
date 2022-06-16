@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Chunk
+namespace ChunkSystem
 {
     public class Chunk : MonoBehaviour
     {

@@ -21,13 +21,17 @@ namespace Player
         [SerializeField, Min(0f)] private float verticalSpeed;
         [SerializeField, Min(0f)] private float runSpeed;
 
+
+        public Vector3 StartPosition { get; private set; }
+        public Vector3 Position => body.position;
+        
+        
         private Rigidbody body;
         private RunSpeedMode runSpeedMode;
         private RunMode runMode;
         private State state;
         
-
-
+        
         private void Start()
         {
             body = GetComponent<Rigidbody>();
@@ -64,6 +68,14 @@ namespace Player
             playerTurnRight.RaiseEvent();
         }
 
+        public void OnGameStarted()
+        {
+            var currentChunk = playerCollision.CurrentChunk;
+            StartPosition = currentChunk == null ? Vector3.zero : currentChunk.Position;
+
+            runSpeedMode = RunSpeedMode.Normal;
+        }
+
         public void OnLevelEnd()
         {
             StopRunning();
@@ -81,6 +93,8 @@ namespace Player
 
         private void UpdateRunSpeedMode()
         {
+            if (runSpeedMode == RunSpeedMode.Slow) return;
+            
             var positionX = body.position.x;
             var newRunSpeedMode = positionX < 0f ? RunSpeedMode.Fast : RunSpeedMode.Normal;
             
@@ -141,6 +155,11 @@ namespace Player
             var speed = state == State.Run ? runSpeed : 0f;
             speed *= runSpeedMode == RunSpeedMode.Fast ? levelData.FastRunMultiplier : 1f;
 
+            if (runSpeedMode == RunSpeedMode.Slow)
+            {
+                speed = levelData.DummySpeed;
+            }
+
             if (playerCollision.IsBlockedByFellow)
             {
                 speed = Mathf.Clamp(speed, 0f, levelData.DummySpeed);
@@ -161,6 +180,7 @@ namespace Player
         
         private enum RunSpeedMode
         {
+            Slow,
             Normal,
             Fast
         }
