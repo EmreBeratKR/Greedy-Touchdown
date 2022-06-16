@@ -51,14 +51,14 @@ namespace Player
         {
             if (other.CompareTag(groundChunk))
             {
-                playerEnteredNextChunk.RaiseEvent();
                 CurrentChunk = other.GetComponentInParent<Chunk>();
+                playerEnteredNextChunk.RaiseEvent();
             }
             
             else if (other.CompareTag(endChunk))
             {
-                levelEnd.RaiseEvent();
                 CurrentChunk = other.GetComponentInParent<Chunk>();
+                levelEnd.RaiseEvent();
             }
         }
 

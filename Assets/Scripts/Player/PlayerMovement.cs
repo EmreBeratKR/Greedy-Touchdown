@@ -19,6 +19,7 @@ namespace Player
         
         [Header("Values")]
         [SerializeField, Min(0f)] private float verticalSpeed;
+        [SerializeField, Range(0f, 1f)] private float verticalAcceleration;
         [SerializeField, Min(0f)] private float runSpeed;
 
 
@@ -38,6 +39,11 @@ namespace Player
             body.position = Vector3.right * levelData.BorderX;
             
             StartRunning();
+        }
+
+        private void FixedUpdate()
+        {
+            ClampVerticalPosition();
         }
 
         private void Update()
@@ -136,6 +142,25 @@ namespace Player
             }
         }
 
+        private void ClampVerticalPosition()
+        {
+            if (state == State.Idle) return;
+
+            if (body.position.x > levelData.BorderX)
+            {
+                var oldPosition = body.position;
+                oldPosition.x = levelData.BorderX;
+                body.MovePosition(oldPosition);
+            }
+            
+            else if (body.position.x < -levelData.BorderX)
+            {
+                var oldPosition = body.position;
+                oldPosition.x = -levelData.BorderX;
+                body.MovePosition(oldPosition);
+            }
+        }
+
         private void MoveVertical()
         {
             var speedX = verticalSpeed * (float) runMode;
@@ -146,7 +171,7 @@ namespace Player
             }
 
             var oldVelocity = body.velocity;
-            oldVelocity.x = speedX;
+            oldVelocity.x = Mathf.Lerp(oldVelocity.x, speedX, verticalAcceleration);
             body.velocity = oldVelocity;
         }
 
