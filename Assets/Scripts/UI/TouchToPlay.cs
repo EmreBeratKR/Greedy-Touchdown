@@ -4,43 +4,55 @@ using UnityEngine;
 
 namespace UI
 {
-    [RequireComponent(typeof(RectTransform))]
     public class TouchToPlay : MonoBehaviour
     {
         [Header("Event Channels")]
         [SerializeField] private VoidEventChannel gameStarted;
+
+        [Header("References")]
+        [SerializeField] private RectTransform hand;
+        [SerializeField] private RectTransform text;
         
         [Header("Values")]
         [SerializeField, Min(0f)] private float duration;
         [SerializeField, Range(0f, 1f)] private float shrinkness;
         
-        private RectTransform rectTransform;
-        private Sequence sequence;
+        private Sequence handSequence;
+        private Sequence textSequence;
 
         
         private void Start()
         {
-            rectTransform = GetComponent<RectTransform>();
             Animate();
         }
 
         private void Animate()
         {
-            sequence = DOTween.Sequence();
+            handSequence = DOTween.Sequence();
 
-            sequence.Append(rectTransform.DOScale(Vector3.one * shrinkness, duration * 0.5f)
+            handSequence.Append(hand.DOScale(Vector3.one * shrinkness, duration * 0.5f)
                 .SetEase(Ease.InSine));
             
-            sequence.Append(rectTransform.DOScale(Vector3.one, duration * 0.5f)
+            handSequence.Append(hand.DOScale(Vector3.one, duration * 0.5f)
                 .SetEase(Ease.OutSine));
 
-            sequence.SetLoops(-1);
+            handSequence.SetLoops(-1);
+
+            textSequence = DOTween.Sequence();
+            
+            textSequence.Append(text.DOScale(Vector3.one * shrinkness, duration * 0.5f)
+                .SetEase(Ease.InSine));
+            
+            textSequence.Append(text.DOScale(Vector3.one, duration * 0.5f)
+                .SetEase(Ease.OutSine));
+
+            textSequence.SetLoops(-1);
         }
 
         public void OnPointerDown()
         {
             gameStarted.RaiseEvent();
-            sequence.Kill();
+            handSequence.Kill();
             gameObject.SetActive(false);
         }
     }
