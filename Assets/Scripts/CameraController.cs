@@ -9,6 +9,21 @@ public class CameraController : MonoBehaviour
         playerLevelEndFollow,
         gameOver;
 
+
+    private static Camera mainCamera;
+    public static Camera MainCamera
+    {
+        get
+        {
+            if (mainCamera == null)
+            {
+                mainCamera = Camera.main;
+            }
+
+            return mainCamera;
+        }
+    }
+    
     
     private CinemachineVirtualCamera[] virtualCameras;
     private CinemachineVirtualCamera[] VirtualCameras
