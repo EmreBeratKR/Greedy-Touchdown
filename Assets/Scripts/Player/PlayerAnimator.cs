@@ -11,6 +11,7 @@ namespace Player
 
         [Header("Event Channels")]
         [SerializeField] private VoidEventChannel playerThrowBall;
+        [SerializeField] private VoidEventChannel playerDanceOver;
 
         [Header("References")] 
         [SerializeField] private LevelData levelData;
@@ -55,9 +56,14 @@ namespace Player
             animator.SetTrigger(danceTypeKey);
         }
 
-        public void RaisePlayerThrowBall()
+        private void RaisePlayerThrowBall()
         {
             playerThrowBall.RaiseEvent();
+        }
+
+        private void RaisePlayerDanceOver()
+        {
+            playerDanceOver.RaiseEvent();
         }
     }
 }
