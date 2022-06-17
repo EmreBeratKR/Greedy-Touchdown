@@ -203,7 +203,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.19607843}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.29411766}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1315,7 +1315,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.4811321, g: 0.33047703, b: 0, a: 1}
+        key0: {r: 0.38679248, g: 0.31762472, b: 0.23171058, a: 1}
         key1: {r: 0.4811321, g: 0.33047703, b: 0, a: 0}
         key2: {r: 1, g: 0.553, b: 0, a: 0}
         key3: {r: 0, g: 0.553, b: 1, a: 0}
@@ -2073,7 +2073,7 @@ ParticleSystem:
         m_RotationOrder: 4
     inWorldSpace: 0
   InheritVelocityModule:
-    enabled: 1
+    enabled: 0
     m_Mode: 0
     m_Curve:
       serializedVersion: 2
@@ -2353,7 +2353,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -4749,7 +4749,7 @@ ParticleSystemRenderer:
   m_Flip: {x: 0.5, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
-  m_ApplyActiveColorSpace: 1
+  m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_VertexStreams: 0001030405
   m_Mesh: {fileID: 0}
@@ -4872,8 +4872,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 0.4
+      scalar: 0.3
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4943,7 +4943,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.39215687}
+      maxColor: {r: 0.3882353, g: 0.31764707, b: 0.23529412, a: 0.78431374}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5827,7 +5827,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 2
@@ -5989,7 +5989,7 @@ ParticleSystem:
         m_RotationOrder: 0
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -5997,7 +5997,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.48235294, g: 0.32941177, b: 0, a: 1}
+        key0: {r: 0.24528301, g: 0.19989319, b: 0.1469384, a: 1}
         key1: {r: 0.48235294, g: 0.32941177, b: 0, a: 0}
         key2: {r: 1, g: 0.434, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -7044,7 +7044,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -9440,7 +9440,7 @@ ParticleSystemRenderer:
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
-  m_ApplyActiveColorSpace: 1
+  m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_VertexStreams: 0001030405
   m_Mesh: {fileID: 0}
