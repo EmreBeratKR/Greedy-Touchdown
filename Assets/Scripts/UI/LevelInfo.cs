@@ -74,7 +74,11 @@ namespace UI
             var oldProgress = progressBar.fillAmount;
             var smoothProgress = Mathf.Lerp(oldProgress, progress, smoothness);
             progressBar.fillAmount = smoothProgress;
-            indicator.localPosition = Vector3.Lerp(startAnchor.localPosition, endAnchor.localPosition, smoothProgress);
+            
+            var localPositionX = Mathf.Lerp(startAnchor.localPosition.x, endAnchor.localPosition.x, smoothProgress);
+            var oldLocalPosition = indicator.localPosition;
+            oldLocalPosition.x = localPositionX;
+            indicator.localPosition = oldLocalPosition;
         }
         
         private enum State
