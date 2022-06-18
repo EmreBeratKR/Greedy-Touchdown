@@ -1,15 +1,22 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private static int ActiveSceneIndex => SceneManager.GetActiveScene().buildIndex;
-    
-    
+    [SerializeField, Scene] private int 
+        fittingRoom,
+        game;
+
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(game);
+    }
     
     public void RestartLevel()
     {
-        SceneManager.LoadScene(ActiveSceneIndex);
+        LoadGame();
     }
 
     public void NextLevel()

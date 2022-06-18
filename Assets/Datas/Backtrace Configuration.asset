@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e908b13f7467f4185f3f45d43568c4, type: 3}
   m_Name: Backtrace Configuration
   m_EditorClassIdentifier: 
-  ServerUrl: 
+  ServerUrl: https://submit.backtrace.io/emreberatkr/e78bcff5a2971a8356f44437e079c98309ee8569e7068f8242a2534cb67e5cec/json
   Token: 
   ReportPerMin: 50
   DisableInEditor: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   ReportFilterType: 0
   GameObjectDepth: -1
   NumberOfLogs: 10
-  PerformanceStatistics: 0
+  PerformanceStatistics: 1
   SendUnhandledGameCrashesOnGameStartup: 1
   CaptureNativeCrashes: 1
   HandleANR: 1
