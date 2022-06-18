@@ -1774,7 +1774,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cbef46911564add86ade45a809f971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyRenderer: {fileID: 8787613745717408865}
+  renderers:
+  - {fileID: 8787613745717408865}
+  - {fileID: 8787613746233228238}
+  - {fileID: 8787613747186537671}
+  - {fileID: 8787613747287620629}
   bodyMaterials:
   - {fileID: 2100000, guid: 0cddbaf468b974e43b5f3ca8744e1bf4, type: 2}
   - {fileID: 2100000, guid: 17b1b23d7df164bb99349f663cf5cb5b, type: 2}

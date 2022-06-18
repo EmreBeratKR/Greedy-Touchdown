@@ -1595,7 +1595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cbef46911564add86ade45a809f971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyRenderer: {fileID: 3839224524231810425}
+  renderers:
+  - {fileID: 3839224524231810425}
+  - {fileID: 3839224524647125718}
+  - {fileID: 3839224525702692319}
+  - {fileID: 3839224525736088845}
   bodyMaterials:
   - {fileID: 2100000, guid: 15cb0ab3f26e647bfa2b49f4b2f26274, type: 2}
   - {fileID: 2100000, guid: 60d479c137a2047ac98fedd9cca0328e, type: 2}

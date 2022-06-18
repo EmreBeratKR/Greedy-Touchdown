@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 58a92497ff2e845758c56d888d187cca,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -886,7 +886,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319119158}
-  m_LocalRotation: {x: 0.18920657, y: -0.000000008447775, z: 0.000000001627685, w: 0.98193735}
+  m_LocalRotation: {x: 0.18920656, y: 0.000000008447812, z: -0.0000000016278751, w: 0.98193735}
   m_LocalPosition: {x: 0, y: 1.826, z: -1.709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1376,7 +1376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447209984}
-  m_LocalRotation: {x: 0.18917827, y: 0.000000015029368, z: -0.0000000028951186, w: 0.98194283}
+  m_LocalRotation: {x: 0.18917829, y: -0.000000020975833, z: 0.00000000404154, w: 0.98194283}
   m_LocalPosition: {x: 0, y: 2.5769997, z: -3.586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2847,7 +2847,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048145272}
-  m_LocalRotation: {x: 0.14672393, y: -0.2952453, z: 0.04593951, w: 0.94296974}
+  m_LocalRotation: {x: 0.14672396, y: -0.29524526, z: 0.045939513, w: 0.94296974}
   m_LocalPosition: {x: 3.5764556, y: 2, z: -5.1514378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2940,37 +2940,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075701374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9cbef46911564add86ade45a809f971, type: 3}
+  m_Script: {fileID: 11500000, guid: c424c7e86b3014139ade3f7e2798ee14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyRenderer: {fileID: 4635863393647784485}
-  bodyMaterials: []
-  randomizeBodyMaterial: 0
-  numbers:
-  - {fileID: 1620390433811387155}
-  - {fileID: 1082759764555902153}
-  - {fileID: 6159137561436587755}
-  - {fileID: 5370316755116430122}
-  - {fileID: 7774529002099359271}
-  - {fileID: 1056731617815344255}
-  - {fileID: 5305863693814559427}
-  - {fileID: 1311867235788543937}
-  - {fileID: 9086253869398908127}
-  - {fileID: 5215635853624096536}
-  - {fileID: 461040894387012964}
-  - {fileID: 3439927620670446544}
-  - {fileID: 7345763850517077963}
-  - {fileID: 756426401924364772}
-  - {fileID: 1061696756752540493}
-  - {fileID: 6231151941609218061}
-  - {fileID: 8696317757189026794}
-  - {fileID: 3692866747243008944}
-  - {fileID: 5060136399748776352}
-  - {fileID: 3693860315579022564}
-  randomizeNumber: 1
-  numberMeshFilter: {fileID: 0}
-  numberMeshes: []
-  randomizeNumberMesh: 0
+  renderers:
+  - {fileID: 4635863393647784485}
+  - {fileID: 8579018360757542103}
+  - {fileID: 3805478884356153577}
+  - {fileID: 392188119057199025}
+  uniformNumberModels:
+  - {fileID: 8349273036769440922}
+  - {fileID: 6548819133745041219}
+  - {fileID: 9087281070459590795}
+  - {fileID: 1688099134812315207}
+  - {fileID: 2969602801449220614}
+  - {fileID: 3108844065618114789}
+  - {fileID: 6174389879929479321}
+  - {fileID: 8922798725964403655}
+  - {fileID: 1770920310635322273}
+  - {fileID: 583136345048481997}
+  - {fileID: 744578671114207308}
+  - {fileID: 407418191971319466}
+  - {fileID: 7103240741392239628}
+  - {fileID: 7622144777779613697}
+  - {fileID: 7389941671696313939}
+  - {fileID: 5275384007108257932}
+  - {fileID: 3129119330191794028}
+  - {fileID: 353955240789361220}
+  - {fileID: 7308307420454188492}
+  - {fileID: 5987635896994993787}
+  playerTypeMaterials:
+  - {fileID: 2100000, guid: 0cddbaf468b974e43b5f3ca8744e1bf4, type: 2}
+  - {fileID: 2100000, guid: 17b1b23d7df164bb99349f663cf5cb5b, type: 2}
+  - {fileID: 2100000, guid: ca5f4fb01821941ae8d2cb49c9eb6476, type: 2}
 --- !u!1 &1082358377
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,7 +3687,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149911935}
-  m_LocalRotation: {x: 0.18920657, y: -0.000000008447775, z: 0.000000001627685, w: 0.98193735}
+  m_LocalRotation: {x: 0.18920656, y: 0.000000008447812, z: -0.0000000016278751, w: 0.98193735}
   m_LocalPosition: {x: 0, y: 1.826, z: -1.709}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -2444,7 +2444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cbef46911564add86ade45a809f971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyRenderer: {fileID: 7369998303106240044}
+  renderers:
+  - {fileID: 7369998303106240044}
+  - {fileID: 7369998303324109317}
+  - {fileID: 7369998302873354374}
+  - {fileID: 7369998303920044124}
   bodyMaterials:
   - {fileID: 2100000, guid: 0cddbaf468b974e43b5f3ca8744e1bf4, type: 2}
   - {fileID: 2100000, guid: 17b1b23d7df164bb99349f663cf5cb5b, type: 2}

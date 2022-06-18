@@ -4,7 +4,7 @@ using UnityEngine;
 public class ModelRandomizer : MonoBehaviour
 {
     [Header("Body Material")]
-    [SerializeField] private SkinnedMeshRenderer bodyRenderer;
+    [SerializeField] private Renderer[] renderers;
     [SerializeField] private Material[] bodyMaterials;
     [SerializeField] private bool randomizeBodyMaterial;
 
@@ -31,7 +31,11 @@ public class ModelRandomizer : MonoBehaviour
         if (!randomizeBodyMaterial) return;
         
         var randomBodyMaterial = bodyMaterials[Random.Range(0, bodyMaterials.Length)];
-        bodyRenderer.material = randomBodyMaterial;
+
+        foreach (var bodyRenderer in renderers)
+        {
+            bodyRenderer.material = randomBodyMaterial;
+        }
     }
     
     private void RandomizeNumber()
