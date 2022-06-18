@@ -554,6 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95211884}
   - component: {fileID: 95211883}
+  - component: {fileID: 95211885}
   m_Layer: 0
   m_Name: Player Preview
   m_TagString: Untagged
@@ -617,6 +618,21 @@ Transform:
   m_Father: {fileID: 921638950}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95211885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95211882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9385e67f6b6ab44d7bcbda7d3dc0c979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 95211883}
+  anger: 1385200519
+  cancelAnger: -1516577784
 --- !u!1 &99162328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1633,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270727297}
-  m_LocalRotation: {x: 0.00000059417124, y: -0.9901491, z: 0.14001712, w: 0.00000008401966}
+  m_LocalRotation: {x: 0.00000059417124, y: -0.9901491, z: 0.14001712, w: 0.00000008401967}
   m_LocalPosition: {x: 0, y: 1.69, z: 1.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5062,7 +5078,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837457354}
-  m_LocalRotation: {x: -0.15129267, y: -0.00000001074587, z: 0.0000000016442049, w: -0.98848903}
+  m_LocalRotation: {x: -0.15129265, y: -0.000000004722014, z: 7.2222694e-10, w: -0.98848903}
   m_LocalPosition: {x: 0, y: 2.28, z: -3.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6008,6 +6024,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 921638951}
         m_MethodName: OnPlayerTypeChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 95211885}
+        m_MethodName: OnCharacterTypeChanged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
