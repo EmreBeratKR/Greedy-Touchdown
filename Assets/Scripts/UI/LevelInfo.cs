@@ -11,6 +11,9 @@ namespace UI
 
         [Header("References")]
         [SerializeField] private SlicedFilledImage progressBar;
+        [SerializeField] private Transform indicator;
+        [SerializeField] private Transform startAnchor;
+        [SerializeField] private Transform endAnchor;
         [SerializeField] private TMP_Text levelNumberField;
         [SerializeField] private PlayerMovement player;
         [SerializeField] private LevelData levelData;
@@ -69,7 +72,9 @@ namespace UI
         private void UpdateProgressBarSmooth()
         {
             var oldProgress = progressBar.fillAmount;
-            progressBar.fillAmount = Mathf.Lerp(oldProgress, progress, smoothness);
+            var smoothProgress = Mathf.Lerp(oldProgress, progress, smoothness);
+            progressBar.fillAmount = smoothProgress;
+            indicator.localPosition = Vector3.Lerp(startAnchor.localPosition, endAnchor.localPosition, smoothProgress);
         }
         
         private enum State
