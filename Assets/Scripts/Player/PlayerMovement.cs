@@ -44,6 +44,7 @@ namespace Player
 
         private void FixedUpdate()
         {
+            MoveVertical();
             ClampVerticalPosition();
         }
 
@@ -52,7 +53,6 @@ namespace Player
             UpdateRunSpeedMode();
             SetForwardSpeed();
             CheckBorder();
-            MoveVertical();
         }
 
         public void OnPointerDown()
