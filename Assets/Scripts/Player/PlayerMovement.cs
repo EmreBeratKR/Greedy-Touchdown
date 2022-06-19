@@ -13,8 +13,9 @@ namespace Player
         [SerializeField] private VoidEventChannel playerNormalRun;
         [SerializeField] private VoidEventChannel playerFastRun;
 
-        [Header("References")]
+        [Header("References")] 
         [SerializeField] private PlayerCollision playerCollision;
+        [SerializeField] private CapsuleCollider mainCollider;
         [SerializeField] private LevelData levelData;
         
         [Header("Values")]
@@ -90,11 +91,15 @@ namespace Player
         private void StartRunning()
         {
             state = State.Run;
+            body.isKinematic = false;
+            mainCollider.enabled = true;
         }
         
         private void StopRunning()
         {
             state = State.Idle;
+            body.isKinematic = true;
+            mainCollider.enabled = false;
         }
 
         private void UpdateRunSpeedMode()

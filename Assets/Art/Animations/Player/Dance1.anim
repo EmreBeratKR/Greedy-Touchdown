@@ -102933,7 +102933,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.1
+  - time: 1.7333333
     functionName: RaisePlayerDanceOver
     data: 
     objectReferenceParameter: {fileID: 0}
